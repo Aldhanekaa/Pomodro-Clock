@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #f5f6fa;
+}
+@mixin flex($flex, $fd, $jc, $ai) {
+    display: $flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+#root {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    width: 100%;
+    min-height: 100vh;
+    @include flex(flex, column, flex-start, center);
+    background: #273c75;
+}
+.title {
+    font-size: 40px;
+}
+
+.label {
+    font-size: 20px;
+}
+
+.display {
+    display: inline-block;
+}
+
+.top {
+    margin-top: 50px;
+    .box {
+        display: inline-block;
+        margin: 0 30px;
+        .label {
+            text-align: center;
+            font-size: 30px;
+        }
+        .box__ {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #break-length, #session-length {
+            font-size: 25px;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            background: transparent;
+            outline: none;
+            border: 0px solid transparent;
+            &:active {
+                background: #192a56;
+            }
+        }
+    }
+}
+
+.card {
+    margin-top: 30px;
+    border: 5px solid #192a56;
+    width: 350px;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    #timer-label {
+        font-size: 30px;
+        font-weight: 800;
+    }
+    #time-left {
+        font-size: 80px;
+    }
+    #start_stop {
+        display: inline-block;
+    }
+    button {
+        width: 40px;
+        height: 40px;
+        background: #192a56;
+        border: 0px solid transparent;
+        margin: 0 5px;
+        cursor: pointer;
+        outline: none;
+        color: red;
+        &:active {
+            color: #192a56;
+            background: transparent;
+            border: 2px solid #192a56;
+        }
+    }
+}
